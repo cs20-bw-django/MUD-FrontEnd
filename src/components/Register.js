@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
+import '../styles/register.css';
+
+// import { Grid, Image } from 'semantic-ui-react'
+
 class Register extends Component {
     state = {
         username: '',
@@ -30,6 +34,7 @@ class Register extends Component {
 
   render() {
     return (
+        <main>
         <div className="login-page">
             <div className="outer-div">
             <div className="link-buttons">
@@ -64,6 +69,7 @@ class Register extends Component {
             </div>
             </div>
         </div>
+        </main>
     );
   }
 

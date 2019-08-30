@@ -1,26 +1,20 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
+import { Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={''} className="App-logo" alt="logo" /> */}
-        <p>
-          Dungeon Escape
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Login from './components/Login';
+import Register from './components/Register';
+import Map from './components/Map';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className= "App">
+        <Route exact path= '/' component={Login} />
+        <Route exact path = '/register' component={Register} />
+        <Route path = '/map' component={Map} />
+      </div>
+    );
+  }
 }
 
 export default App;

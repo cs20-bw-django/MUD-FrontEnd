@@ -10,6 +10,18 @@ export default class Map extends Component {
              rooms: [],
              
         }
+
+    }
+
+    getRooms = () => {
+
+    }
+
+    navigate = (str) => {
+        axios
+        .post('url', str)
+        .then()
+        .catch()
     }
 
     componentDidMount() {
@@ -36,7 +48,12 @@ export default class Map extends Component {
     render() {
         return (
             <div>
-                
+                <div>
+                    <button onClick={() => this.navigate("n")}>up</button>
+                    <button onClick={() => this.navigate("s")}>down</button>
+                    <button onClick={() => this.navigate("w")}>left</button>
+                    <button onClick={() => this.navigate("e")}>right</button>
+                </div>
             </div>
         )
     }

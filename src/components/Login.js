@@ -24,7 +24,7 @@ class Login extends Component {
             console.log('response', res)
             const token = res.data['key'];
             localStorage.setItem('token', `Token ${token}`);
-            this.props.history.push('/adventure');
+            // this.props.history.push('/adventure');
         })
         .catch(err => {
             const error = JSON.stringify(err);

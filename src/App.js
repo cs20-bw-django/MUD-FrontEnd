@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 
 import Login from './components/Login';
 import Register from './components/Register';
+import Map from './components/Map';
 
 class App extends React.Component {
   render() {

@@ -13,10 +13,11 @@ class Register extends Component {
         password2: ''
     };
 
-    inputChangeHandler = e => {
-        const { name, value } = e.target;
-        this.setState({ [name]: value });
-    };
+    handleChange = e => {
+        this.setState({
+          [e.target.name]: e.target.value
+        });
+      };
 
     submitHandler = e => {
         e.preventDefault();
@@ -64,7 +65,7 @@ class Register extends Component {
                     placeholder="Re-enter Password"
                     name="password2"
                     />
-                    <button type="submit">Create Account</button>
+                    <button onClick={(e) => this.submitHandler(e)}>Create Account</button>
                 </form>
             </div>
             </div>
